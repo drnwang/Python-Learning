@@ -1,0 +1,48 @@
+# Sal's Shipping
+# Nathaniel Wang
+
+weight = 41.5
+flatrate = 20
+Dflatrate = 0
+#Ground Shipping
+print('Premium Ground shipping rates:')
+print(f"Flat rate charge: ${flatrate:.2f}")
+print('your weight is ',weight)
+if weight <= 2:
+  rate = 1.50
+  print("Price per pound is $1.50")
+elif weight >= 2 and weight <= 5.9:
+  rate = 3.00
+  print('Price per pound is $3.00')
+elif weight >= 6 and weight <= 9.9:
+  rate = 4.00
+  print('Price per pound is $4.00')
+elif weight >= 10:
+  rate = 4.75
+  print('Price per pound is $4.75')
+
+total = ((rate*weight)+flatrate)
+
+print(f"your total is: ${total:.2f}")
+
+#droneshipping
+print('''
+Drone shipping rates:''')
+print("Drone shipping does not have a flatrate cost")
+print(f"Flat rate charge: ${Dflatrate:.2f}")
+if weight <= 2:
+  rate = 4.50
+  print("Price per pound is $4.50")
+elif weight >= 2 and weight <= 5.9:
+  rate = 9.00
+  print('Price per pound is $9.00')
+elif weight >= 6 and weight <= 9.9:
+  rate = 12.00
+  print('Price per pound is $12.00')
+elif weight >= 10:
+  rate = 14.25
+  print('Price per pound is $14.25')
+
+Dtotal = ((rate*weight)+Dflatrate)
+
+print(f"your total is: ${Dtotal:.2f}")
