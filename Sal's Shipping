@@ -25,6 +25,11 @@ total = ((rate*weight)+flatrate)
 
 print(f"your total is: ${total:.2f}")
 
+#groundshipping premium
+premium_ground = 125.00
+print(f'''
+Ground Shipping Premium costs: ${premium_ground:.2f}''')
+
 #droneshipping
 print('''
 Drone shipping rates:''')
@@ -46,3 +51,13 @@ elif weight >= 10:
 Dtotal = ((rate*weight)+Dflatrate)
 
 print(f"your total is: ${Dtotal:.2f}")
+
+if total < Dtotal and total < premium_ground:
+    print(f'''
+The cheapest option is Ground Shipping: ${total:.2f}''')
+elif Dtotal < total and Dtotal < premium_ground:
+    print(f'''
+The cheapest option is Drone Shipping: ${Dtotal:.2f}''')
+else:
+    print(f'''
+The cheapest option is Ground Shipping Premium: ${premium_ground:.2f}''')
